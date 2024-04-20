@@ -28,8 +28,8 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors, undefined names, or style errors
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --max-line-length=127
+    # stop the build if there are Python syntax errors, undefined names, or style errors
+        flake8 . --count --exclude=venv,fastapi/lib/python3.9/site-packages --select=E9,F63,F7,F82 --show-source --statistics --max-line-length=127
         if [ $? -ne 0 ]; then
           echo "Flake8 found errors."
           exit 1
