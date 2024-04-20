@@ -39,10 +39,10 @@ async def get_root():
 
 
 # TODO: create a POST on a different path that does model inference
-path = "Deploying-a-Scalable-ML-Pipeline-with-FastAPI/model/encoder.pkl"
+path = "model/encoder.pkl"
 encoder = load_model(path)
 
-path = "Deploying-a-Scalable-ML-Pipeline-with-FastAPI/model/model.pkl"
+path = "model/model.pkl"
 model = load_model(path)
 
 @app.post("/data/")
